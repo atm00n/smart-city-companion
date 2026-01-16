@@ -4,8 +4,8 @@ import { Chatbot } from '@/components/Chatbot';
 
 export function Layout() {
   return (
-    <div className="min-h-screen bg-background pb-20">
-      <main className="container max-w-lg mx-auto px-4 py-4">
+    <div className="min-h-screen bg-background pb-24 noise-overlay">
+      <main className="container max-w-lg mx-auto px-4 py-4 relative z-10">
         <Outlet />
       </main>
       <BottomNav />

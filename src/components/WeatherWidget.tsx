@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Cloud, Sun, CloudRain, CloudSnow, Wind, Droplets } from "lucide-react";
+import { Cloud, Sun, CloudRain, CloudSnow, Wind, Droplets, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -98,34 +98,41 @@ export const WeatherWidget = () => {
   }
 
   return (
-    <Card className="bg-gradient-to-br from-primary/10 to-accent/10 backdrop-blur-sm border-border/50">
-      <CardContent className="p-4">
+    <Card className="glass-card overflow-hidden relative group">
+      <div className="absolute inset-0 bg-gradient-to-br from-info/10 via-transparent to-primary/5" />
+      <CardContent className="p-5 relative">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            {getWeatherIcon(weather.weatherCode)}
+          <div className="flex items-center gap-4">
+            <div className="p-3 rounded-2xl bg-gradient-to-br from-yellow-500/20 to-orange-500/10 border border-yellow-500/20 group-hover:scale-110 transition-transform duration-300">
+              {getWeatherIcon(weather.weatherCode)}
+            </div>
             <div>
               <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-bold text-foreground">
-                  {weather.temperature}°C
+                <span className="text-3xl font-bold text-foreground">
+                  {weather.temperature}
                 </span>
+                <span className="text-lg text-muted-foreground">°C</span>
               </div>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground font-medium">
                 {getWeatherDescription(weather.weatherCode)}
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-1 text-xs text-muted-foreground">
-            <div className="flex items-center gap-1">
-              <Droplets className="h-3 w-3" />
-              <span>{weather.humidity}%</span>
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/50 text-xs text-muted-foreground">
+              <Droplets className="h-3.5 w-3.5 text-info" />
+              <span className="font-medium">{weather.humidity}%</span>
             </div>
-            <div className="flex items-center gap-1">
-              <Wind className="h-3 w-3" />
-              <span>{weather.windSpeed} km/h</span>
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/50 text-xs text-muted-foreground">
+              <Wind className="h-3.5 w-3.5 text-accent" />
+              <span className="font-medium">{weather.windSpeed} km/h</span>
             </div>
           </div>
         </div>
-        <p className="text-xs text-muted-foreground mt-2">Pune, Maharashtra</p>
+        <div className="flex items-center gap-2 mt-3 pt-3 border-t border-white/5">
+          <MapPin className="h-3.5 w-3.5 text-primary" />
+          <p className="text-xs text-muted-foreground font-medium">Pune, Maharashtra</p>
+        </div>
       </CardContent>
     </Card>
   );
