@@ -4,7 +4,7 @@
 
 @import "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
 
-/* Pune Smart Tourism - Dark Theme Design System */
+/* City Wander - Premium Dark Theme Design System */
 
 @layer base {
   :root {
@@ -15,88 +15,91 @@
     --card-foreground: 220 25% 10%;
     --popover: 0 0% 100%;
     --popover-foreground: 220 25% 10%;
-    --primary: 25 95% 53%;
+    --primary: 24 100% 50%;
     --primary-foreground: 0 0% 100%;
     --secondary: 220 15% 92%;
     --secondary-foreground: 220 25% 10%;
     --muted: 220 15% 92%;
     --muted-foreground: 220 10% 45%;
-    --accent: 168 76% 42%;
+    --accent: 173 80% 40%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     --border: 220 15% 88%;
     --input: 220 15% 88%;
-    --ring: 25 95% 53%;
-    --radius: 0.75rem;
+    --ring: 24 100% 50%;
+    --radius: 1rem;
 
     /* Custom tourism colors */
-    --success: 142 71% 45%;
+    --success: 142 76% 36%;
     --success-foreground: 0 0% 100%;
     --warning: 38 92% 50%;
     --warning-foreground: 0 0% 10%;
-    --info: 199 89% 48%;
+    --info: 200 95% 50%;
     --info-foreground: 0 0% 100%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(25, 95%, 53%) 0%, hsl(35, 95%, 55%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(168, 76%, 42%) 0%, hsl(180, 70%, 50%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(220, 25%, 8%) 0%, hsl(220, 30%, 12%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(24, 100%, 50%) 0%, hsl(45, 100%, 55%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(173, 80%, 40%) 0%, hsl(190, 90%, 50%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(230, 25%, 5%) 0%, hsl(230, 30%, 10%) 100%);
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(24, 100%, 50%, 0.15) 0px, transparent 50%), 
+                     radial-gradient(at 80% 0%, hsl(173, 80%, 40%, 0.1) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsl(24, 100%, 50%, 0.08) 0px, transparent 50%);
   }
 
   .dark {
-    /* Deep dark background with blue undertones */
-    --background: 220 25% 6%;
-    --foreground: 210 25% 95%;
+    /* Ultra deep dark background */
+    --background: 230 25% 4%;
+    --foreground: 210 40% 98%;
     
-    /* Card surfaces */
-    --card: 220 25% 10%;
-    --card-foreground: 210 25% 95%;
+    /* Card surfaces with subtle warmth */
+    --card: 230 20% 8%;
+    --card-foreground: 210 40% 98%;
     
-    --popover: 220 25% 8%;
-    --popover-foreground: 210 25% 95%;
+    --popover: 230 20% 6%;
+    --popover-foreground: 210 40% 98%;
     
-    /* Primary - Vibrant orange for CTAs */
-    --primary: 25 95% 53%;
+    /* Primary - Electric orange/amber for CTAs */
+    --primary: 24 100% 50%;
     --primary-foreground: 0 0% 100%;
     
-    /* Secondary - Subtle dark surfaces */
-    --secondary: 220 20% 14%;
-    --secondary-foreground: 210 25% 90%;
+    /* Secondary - Rich dark surfaces */
+    --secondary: 230 15% 12%;
+    --secondary-foreground: 210 30% 90%;
     
     /* Muted elements */
-    --muted: 220 20% 14%;
-    --muted-foreground: 215 15% 55%;
+    --muted: 230 15% 15%;
+    --muted-foreground: 215 20% 50%;
     
-    /* Accent - Teal for highlights */
-    --accent: 168 76% 42%;
+    /* Accent - Vibrant teal/cyan */
+    --accent: 173 80% 40%;
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
     
     /* Borders and inputs */
-    --border: 220 20% 18%;
-    --input: 220 20% 14%;
-    --ring: 25 95% 53%;
+    --border: 230 15% 15%;
+    --input: 230 15% 12%;
+    --ring: 24 100% 50%;
     
     /* Custom dark mode tourism colors */
-    --success: 142 71% 45%;
+    --success: 142 70% 45%;
     --success-foreground: 0 0% 100%;
     --warning: 38 92% 50%;
     --warning-foreground: 0 0% 10%;
-    --info: 199 89% 48%;
+    --info: 200 95% 50%;
     --info-foreground: 0 0% 100%;
 
     /* Sidebar */
-    --sidebar-background: 220 25% 8%;
-    --sidebar-foreground: 210 25% 90%;
-    --sidebar-primary: 25 95% 53%;
+    --sidebar-background: 230 25% 6%;
+    --sidebar-foreground: 210 30% 90%;
+    --sidebar-primary: 24 100% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 20% 14%;
-    --sidebar-accent-foreground: 210 25% 90%;
-    --sidebar-border: 220 20% 18%;
-    --sidebar-ring: 25 95% 53%;
+    --sidebar-accent: 230 15% 12%;
+    --sidebar-accent-foreground: 210 30% 90%;
+    --sidebar-border: 230 15% 15%;
+    --sidebar-ring: 24 100% 50%;
   }
 }
 
@@ -108,6 +111,8 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+    background-image: var(--gradient-mesh);
+    background-attachment: fixed;
   }
 
   /* Force dark mode */
@@ -117,53 +122,117 @@
 }
 
 @layer components {
-  /* Glass morphism card */
+  /* Premium glass morphism card */
   .glass-card {
-    @apply bg-card/80 backdrop-blur-xl border border-border/50 shadow-xl;
+    @apply bg-card/60 backdrop-blur-2xl border border-white/[0.08] shadow-2xl;
+    background: linear-gradient(135deg, 
+      hsl(var(--card) / 0.7) 0%, 
+      hsl(var(--card) / 0.4) 100%
+    );
   }
 
-  /* Gradient text */
+  /* Gradient text with shimmer */
   .gradient-text {
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-primary);
   }
 
-  /* Glow effects */
+  /* Animated gradient text */
+  .gradient-text-animated {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, 
+      hsl(24, 100%, 50%), 
+      hsl(45, 100%, 55%), 
+      hsl(24, 100%, 50%)
+    );
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+  }
+
+  @keyframes shimmer {
+    to { background-position: 200% center; }
+  }
+
+  /* Enhanced glow effects */
   .glow-primary {
-    box-shadow: 0 0 40px -10px hsl(var(--primary) / 0.4);
+    box-shadow: 
+      0 0 20px -5px hsl(var(--primary) / 0.5),
+      0 0 40px -10px hsl(var(--primary) / 0.3),
+      inset 0 1px 0 0 hsl(0 0% 100% / 0.1);
   }
 
   .glow-accent {
-    box-shadow: 0 0 40px -10px hsl(var(--accent) / 0.4);
+    box-shadow: 
+      0 0 20px -5px hsl(var(--accent) / 0.5),
+      0 0 40px -10px hsl(var(--accent) / 0.3),
+      inset 0 1px 0 0 hsl(0 0% 100% / 0.1);
   }
 
-  /* Category badges */
+  .glow-info {
+    box-shadow: 
+      0 0 20px -5px hsl(var(--info) / 0.5),
+      0 0 40px -10px hsl(var(--info) / 0.3),
+      inset 0 1px 0 0 hsl(0 0% 100% / 0.1);
+  }
+
+  /* Floating orbs for background */
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.4;
+    pointer-events: none;
+    animation: float-orb 8s ease-in-out infinite;
+  }
+
+  .orb-primary {
+    background: hsl(var(--primary));
+  }
+
+  .orb-accent {
+    background: hsl(var(--accent));
+  }
+
+  @keyframes float-orb {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(10px, -20px) scale(1.05); }
+    66% { transform: translate(-10px, 10px) scale(0.95); }
+  }
+
+  /* Category badges with glow */
   .category-heritage {
-    @apply bg-amber-500/20 text-amber-400 border-amber-500/30;
+    @apply bg-amber-500/20 text-amber-400 border-amber-500/40;
+    box-shadow: 0 0 12px -3px hsl(38 92% 50% / 0.3);
   }
 
   .category-nature {
-    @apply bg-emerald-500/20 text-emerald-400 border-emerald-500/30;
+    @apply bg-emerald-500/20 text-emerald-400 border-emerald-500/40;
+    box-shadow: 0 0 12px -3px hsl(142 76% 36% / 0.3);
   }
 
   .category-food {
-    @apply bg-orange-500/20 text-orange-400 border-orange-500/30;
+    @apply bg-orange-500/20 text-orange-400 border-orange-500/40;
+    box-shadow: 0 0 12px -3px hsl(24 100% 50% / 0.3);
   }
 
   .category-shopping {
-    @apply bg-pink-500/20 text-pink-400 border-pink-500/30;
+    @apply bg-pink-500/20 text-pink-400 border-pink-500/40;
+    box-shadow: 0 0 12px -3px hsl(330 81% 60% / 0.3);
   }
 
   .category-entertainment {
-    @apply bg-purple-500/20 text-purple-400 border-purple-500/30;
+    @apply bg-purple-500/20 text-purple-400 border-purple-500/40;
+    box-shadow: 0 0 12px -3px hsl(271 81% 56% / 0.3);
   }
 
   .category-religious {
-    @apply bg-yellow-500/20 text-yellow-400 border-yellow-500/30;
+    @apply bg-yellow-500/20 text-yellow-400 border-yellow-500/40;
+    box-shadow: 0 0 12px -3px hsl(48 96% 53% / 0.3);
   }
 
   .category-museum {
-    @apply bg-cyan-500/20 text-cyan-400 border-cyan-500/30;
+    @apply bg-cyan-500/20 text-cyan-400 border-cyan-500/40;
+    box-shadow: 0 0 12px -3px hsl(188 86% 53% / 0.3);
   }
 
   /* Alert types */
@@ -177,6 +246,104 @@
 
   .alert-danger {
     @apply bg-destructive/10 border-destructive/30 text-destructive;
+  }
+
+  /* Premium button styles */
+  .btn-premium {
+    @apply relative overflow-hidden;
+    background: linear-gradient(135deg, 
+      hsl(var(--primary)) 0%, 
+      hsl(35, 100%, 55%) 100%
+    );
+    box-shadow: 
+      0 4px 15px -3px hsl(var(--primary) / 0.5),
+      inset 0 1px 0 0 hsl(0 0% 100% / 0.2);
+  }
+
+  .btn-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(0 0% 100% / 0.2),
+      transparent
+    );
+    transition: 0.5s;
+  }
+
+  .btn-premium:hover::before {
+    left: 100%;
+  }
+
+  /* Icon container with gradient border */
+  .icon-container {
+    @apply relative rounded-2xl p-3;
+    background: linear-gradient(135deg, 
+      hsl(var(--secondary)) 0%, 
+      hsl(var(--card)) 100%
+    );
+  }
+
+  .icon-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, 
+      hsl(0 0% 100% / 0.1), 
+      transparent
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-500;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+      0 20px 40px -15px hsl(0 0% 0% / 0.5),
+      0 0 30px -10px hsl(var(--primary) / 0.2);
+  }
+
+  /* Pulse ring animation */
+  .pulse-ring {
+    @apply relative;
+  }
+
+  .pulse-ring::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: inherit;
+    border: 2px solid hsl(var(--primary) / 0.5);
+    animation: pulse-ring 2s ease-out infinite;
+  }
+
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.15); opacity: 0; }
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.015;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
 }
 
@@ -202,11 +369,16 @@
   .animation-delay-300 { animation-delay: 300ms; }
   .animation-delay-400 { animation-delay: 400ms; }
   .animation-delay-500 { animation-delay: 500ms; }
+
+  /* Text shadow for depth */
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+  }
 }
 
 /* Leaflet map customizations for dark theme */
 .leaflet-container {
-  background: hsl(220 25% 6%);
+  background: hsl(230 25% 4%);
 }
 
 .leaflet-tile-pane {
@@ -214,7 +386,7 @@
 }
 
 .leaflet-popup-content-wrapper {
-  @apply bg-card border border-border rounded-lg shadow-xl;
+  @apply bg-card border border-border rounded-xl shadow-2xl;
 }
 
 .leaflet-popup-content {
